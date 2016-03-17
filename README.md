@@ -26,12 +26,7 @@ This can also be used with the gitlab runner executing the ci jobs. All we need 
     volumes = ["/cache","/var/run/docker.sock:/var/run/docker.sock"]
 ```
 
-## How to build this container?
-```
-docker build -t twalter/mvn-docker .
-```
-
 ## How to run this container?
 ```
-docker run -v /var/run/docker.sock:/var/run/docker.sock -it twalter/mvn-docker /bin/bash
+docker run -v /var/run/docker.sock:/var/run/docker.sock -it twalter/maven-docker /bin/bash
 ```

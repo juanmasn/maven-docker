@@ -1,5 +1,5 @@
 FROM maven:3-jdk-8
-MAINTAINER Torsten Walter
+MAINTAINER juanmasn
 
 RUN apt-get update -y
 RUN apt-get install -y apt-transport-https ca-certificates
@@ -10,3 +10,5 @@ RUN apt-cache policy docker-engine
 
 RUN apt-get update
 RUN apt-get install -y docker-engine
+RUN apt-get -y install python-pip
+RUN pip install docker-compose

@@ -10,6 +10,7 @@ RUN apt-cache policy docker-engine
 
 RUN apt-get update
 RUN apt-get install -y docker-engine
+RUN service docker start
 RUN usermod -aG docker $(whoami)
 RUN apt-get -y install python-pip
 RUN pip install docker-compose
